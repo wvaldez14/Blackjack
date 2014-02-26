@@ -1,0 +1,16 @@
+public class Blackjack{
+  public static void main (String[] args){
+    System.out.println("Welcome to the Blackjack Simulator");
+    System.out.println("If you would like to quit please type it in");
+    System.out.println("Type in weather you want to hit, stand, or quit");
+    System.out.println("Here are you cards...");
+    
+    Dealer game = new Dealer();
+    boolean quit = false;
+    game.fill();
+    while(quit == false){
+    game.deal();
+  }
+    System.out.println("Thanks for playing");
+}
+}
