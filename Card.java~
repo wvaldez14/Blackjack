@@ -6,9 +6,30 @@ public class Card{
     suit = s;
   }
   public int getValue(){
+    if(value>10){ // for cards above 10 value as 10s (jacks,kings,queens)
+      value = 10;
+    }
     return value;
   }
   public String getSuit(){
     return suit;
+  }
+  public String toString()
+  {
+    if(value == 1){
+      return "The Ace of " + suit + ".";
+    }
+    else if(value>10){
+      if(value == 11){
+        return "The Jack of " + suit + "."; // this shows on the interface the proper face card
+      }
+      else if(value == 12){
+        return "The Queen of " + suit + ".";
+      }
+      else if(value == 13){
+        return "The King of " + suit + ".";
+      }
+    }
+    return "The " + value + " of " + suit + ".";
   }
 }
